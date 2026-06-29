@@ -42,6 +42,7 @@ import AnalyticsView from './pages/analytics/AnalyticsView';
 import ExecutionListView from './pages/execution/ExecutionListView';
 import DatasetsView from './pages/datasets/DatasetsView';
 import TestComponentListView from './pages/testcase/TestComponentListView';
+import CicdIntegrationView from './pages/cicd/CicdIntegrationView';
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -164,6 +165,7 @@ export default function App() {
             <Route path="/variables"               element={<PrivateRoute><VariablesView /></PrivateRoute>} />
             <Route path="/environments"            element={<PrivateRoute><EnvironmentsView /></PrivateRoute>} />
             <Route path="/datasets"                element={<PrivateRoute><DatasetsView /></PrivateRoute>} />
+            <Route path="/cicd"                    element={<PrivateRoute><CicdIntegrationView /></PrivateRoute>} />
             <Route path="*"                        element={<PrivateRoute><Navigate to="/dashboard" replace /></PrivateRoute>} />
           </Routes>
         </div>

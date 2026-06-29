@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState, useEffect, useRef } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import {
-  LayoutDashboard, Play, History, CalendarClock,
+  LayoutDashboard, Play, History, CalendarClock, GitMerge,
   PackageOpen, FlaskConical, SlidersHorizontal, Database, Globe,
   MonitorDot, Users2, Download,
   BarChart2, Eye, Share2,
@@ -61,6 +61,7 @@ export default function Sidebar({ user, sidebarOpen, path }) {
         <NavItem to="/executions/running"  icon={Play}            label="Running"          active={is('/executions/running')} />
         <NavItem to="/executions/history"  icon={History}         label="History"          active={is('/executions/history')} />
         <NavItem to="/scheduler"           icon={CalendarClock}   label="Scheduled"        active={is('/scheduler') || is('/scheduler/create')} />
+        <NavItem to="/cicd"                icon={GitMerge}        label="CI/CD Integration" active={is('/cicd')} />
 
         <div className="nav-section">Test Management</div>
         <NavItem to="/test-suites"         icon={PackageOpen}     label="Suites"           active={is('/test-suites')} />
